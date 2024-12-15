@@ -1,15 +1,21 @@
 .dummy-container {
     height: 100vh;
     }
-    .container {
+    .image-container {
+    padding-top: 5%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     }
+    .image{
+        width: 100%;
+        height: 100%;
+        
+    }
     .static-image,
     .animated-gif {
-    width: 60%;
+    width: 50%;
    height: auto;
     position: absolute;
     }

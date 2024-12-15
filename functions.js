@@ -16,15 +16,18 @@ ScrollTrigger.create({
    onUpdate:(self) => {
     if(self.progress < 0.25){
         gsap.to('#layer01',{opacity:1});
-        gsap.to('#layer02,#layer03, #layer04',{opacity:0});
+        gsap.to('#layer02,#layer03, #layer04,#layer05',{opacity:0});
     } else if(self.progress >= 0.25 && self.progress <0.5){
         gsap.to('#layer01, #layer02',{opacity:1});
-        gsap.to('#layer03,#layer04',{opacity:0});
+        gsap.to('#layer03,#layer04,#layer05',{opacity:0});
     } else if (self.progress >= 0.5 && self.progress < 0.75){
         gsap.to('#layer01,#layer02,#layer03',{opacity:1});
-        gsap.to('#layer04',{opacity:0});
-    } else {
+        gsap.to('#layer04,#layer05',{opacity:0});
+    } else if (self.progress >= 0.75 && self.progress < 0.8){
         gsap.to('#layer01,#layer02,#layer03,#layer04',{opacity:1});
+        gsap.to('#layer05',{opacity:0});
+    } else {
+        gsap.to('#layer01,#layer02,#layer03,#layer04,#layer05',{opacity:1});
 
     }
    },
